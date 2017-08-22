@@ -5,10 +5,11 @@
         </head>
         
         <body> 
-            <h1>JSON 1</h1>
             <div>
+                <a href="index.html">Home</a>
                 <a href="uptojson1.html">Tasks up to JSON 1</a>
                 <a href="json1.html">JSON 1</a>
+                <a href="json1.html">JSON 2</a>
                 <br /><br /><br />
             </div>
             <form>
@@ -16,18 +17,58 @@
                 <br />
             </form>
 
+            <div id="jDiv">
+                
+            </div>
+
             <script>
                 function json1() {
+                    //console.log("Hey i'm working at the top of the first function!");
                     var requestURL = 'https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/example.json';
                     var request = new XMLHttpRequest();
                     request.open('GET', requestURL);
                     request.responseType = 'json';
                     request.send();
-                    request.onload - function() {
+                    //console.log("Hey i'm working before the second function!");
+                    request.onload = function() {
                         var requestData = request.response;
-                        var myH1 = document.createElement("h1");
+                        var myH1 = document.createElement('h1');
                         myH1.textContent = requestData['squadName'];
-                        document.getElementsByTagName('head')[0].appendChild(myH1);
+                        var div = document.getElementById('jDiv');
+                        div.appendChild(myH1);
+                        //document.getElementsByTagName('head')[0].appendChild(myH1);
+                        //console.log("Hey i'm working inside the second function!");
+                        //console.log(requestData);
+                        var uList = document.createElement('ul');
+                        var uList2 = document.createElement('ul');
+                        var uList3 = document.createElement('ul');
+                        var li1 = document.createElement('li');
+                        var li2 = document.createElement('li');
+                        var li3 = document.createElement('li');
+                        li1.textContent = requestData['homeTown'];
+                        li2.textContent = requestData['formed'];
+                        li3.textContent = requestData['active'];
+                        for(let i = 0; i < requestData['members'].length; i++) {
+                            var loopLi = document.createElement('li');
+                            var n = requestData['members'][i].name;
+                            var a = requestData['members'][i].age;
+                            var sI = requestData['members'][i].secretIdentity;
+                            loopLi.textContent = ("name: " + n + ", age: " + a + ", secret identity: " + sI);
+                            uList2.appendChild(loopLi);
+                            for(let j = 0; j < requestData['members'][i]['powers'].length; j++) {
+                                var loop2Li = document.createElement('li');
+                                loop2Li.textContent = requestData['members'][i]['powers'][j];
+                                uList3.appendChild(loop2Li);
+                                uList2.appendChild(uList3);
+                                var uList3 = document.createElement('ul');
+                            }
+                        }
+
+                        uList.appendChild(li1);
+                        uList.appendChild(li2);
+                        uList.appendChild(li3);
+                        uList.appendChild(uList2);
+                        div.appendChild(uList);
                     }
                 }
             </script>
