@@ -1,22 +1,76 @@
 <!DOCTYPE>
-    <html>
-        <head>
-    
-        </head>
-    
-        <body> 
-            <div>
-                <h1>TEMPORARY HOME PAGE</h1>
-            </div>
-            <div>
-                <a href="index.html">Home</a>
-                <a href="uptojson1.html">Tasks up to JSON 1</a>
-                <a href="json1.html">JSON 1</a>
-                <a href="json1.html">JSON 2</a>
-            </div>
+<html>
 
-            <script>
+<head>
 
-            </script>
-        </body>
-    </html>
+</head>
+
+<body>
+    <div>
+        <h1>JSON 2</h1>
+    </div>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="uptojson1.html">Tasks up to JSON 1</a>
+        <a href="json1.html">JSON 1</a>
+        <a href="json2.html">JSON 2</a>
+        <br /><br /><br />
+    </div>
+
+    <form>
+        <input type="text" placeholder="Input" id="input" />
+        <input type="button" onclick="json2()" value="JSON 2 Load Data" />
+        <br />
+    </form>
+
+    <div id="jDiv">
+
+    </div>
+
+    <script>
+        function json2() {
+            var inp = document.getElementById('input').value;
+            var requestURL = 'https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/kings.json';
+            var request = new XMLHttpRequest();
+            request.open('GET', requestURL);
+            request.responseType = 'json';
+            request.send();
+            //console.log("Hey i'm working before the second function!");
+            request.onload = function () {
+                console.log(inp); //test - works
+                var requestData = request.response;
+                for (let i = 0; i < requestData.length; i++) {
+                    console.log(requestData.length); //works
+                    for (inp in requestData) {
+                        //console.log("hello");works
+                        if (requestData.hasOwnProperty(inp)) {
+                            //console.log("from");works
+                            if (requestData == inp) { //breaks here
+                                console.log("im inside the if statement");
+                                var out = document.createElement("h3");
+                                //out.textContent = requestData;
+                                var d = document.getElementById('jDiv');
+                                d.appendChild(out);
+                            }
+
+                            /*var nm = requestData[i]['nm'];
+                            var cty = requestData[i]['cty'];
+                            var hse = requestData[i]['hse'];
+                            var yrs = requestData[i]['yrs'];
+                            out.textContent = (nm + ", " + cty + ", " + hse + ", " + yrs);*/
+                            //console.log(nm + ", " + cty + ", " + hse + ", " + yrs); //test - undefined
+
+                        }
+                    }
+                }
+            }
+        }
+        /*var myH1 = document.createElement('h1');
+                myH1.textContent = requestData['squadName'];
+                var div = document.getElementById('jDiv');
+                div.appendChild(myH1);*/
+        //House of Denmark
+    </script>
+</body>
+
+</html>

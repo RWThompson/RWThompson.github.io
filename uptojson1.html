@@ -1,24 +1,25 @@
 <!DOCTYPE>
-  <html>
-    <head>
-    
-    </head>
-    
-    <body> 
-      <div>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <div>
         <a href="index.html">Home</a>
         <a href="uptojson1.html">Tasks up to JSON 1</a>
         <a href="json1.html">JSON 1</a>
-        <a href="json1.html">JSON 2</a>
-      </div>
-      <form>
+        <a href="json2.html">JSON 2</a>
+    </div>
+    <form>
         <h1>Events 1</h1>
         <input type="button" onclick="output()" value="Call Function" />
         <input type="button" onclick="increaseAge()" value="Increase Age" />
         <br />
-      </form>
-      
-      <form>
+    </form>
+
+    <form>
         <h1>Functions 3 / Events 2</h1>
         <input type="text" placeholder="Name" id="name" />
         <input type="number" placeholder="Age" id="age" />
@@ -30,9 +31,9 @@
         <br />
         <h4 id="message"></h4>
         <br />
-      </form>
-      
-      <form>
+    </form>
+
+    <form>
         <h1>Strings 1</h1>
         <input type="button" onclick="strings1()" value="Strings 1 Function" />
         <br />
@@ -40,17 +41,17 @@
         <br />
         <h4 id="strings1msg2"></h4>
         <br />
-      </form>
-      
-      <form>
+    </form>
+
+    <form>
         <h1>Strings 2</h1>
         <input type="button" onclick="strings2()" value="Strings 2 Function" />
         <br />
         <h4 id="strings2msg"></h4>
         <br />
-      </form>
-      
-      <form>
+    </form>
+
+    <form>
         <h1>Arrays 1 / Strings 3</h1>
         <input type="button" onclick="arrays1()" value="Arrays 1 Function" />
         <br />
@@ -60,34 +61,34 @@
         <br />
         <h4 id="arrays1msg2"></h4>
         <br />
-      </form>
-      
-      <form>
+    </form>
+
+    <form>
         <h1>Conditionals 1</h1>
         <h4>MUST CREATE A PERSON IN THE "FUNCTIONS 3 / EVENTS 2" SECTION BEFORE THIS WILL WORK!</h4>
         <input type="button" onclick="conditionals1()" value="Conditionals 1 Function" />
         <br />
         <h4 id="conditionals1msg"></h4>
         <br />
-      </form>
-      
-      <form>
+    </form>
+
+    <form>
         <h1>Iteration 1</h1>
         <input type="button" onclick="iteration1()" value="Iteration 1 Function" />
         <br />
         <h4 id="iteration1msg"></h4>
         <br />
-      </form>
-      
-      <form>
+    </form>
+
+    <form>
         <h1>Iteration 2</h1>
         <input type="button" onclick="iteration2()" value="Iteration 2 Function" />
         <br />
         <h4 id="iteration2msg"></h4>
         <br />
-      </form>
-      
-      <form>
+    </form>
+
+    <form>
         <h1>Fizz Buzz</h1>
         <input type="text" placeholder="Fizz Alternative" id="fizzAlt" />
         <input type="text" placeholder="Buzz Alternative" id="buzzAlt" />
@@ -96,230 +97,244 @@
         <br />
         <h4 id="fizzbuzzmsg"></h4>
         <br />
-      </form>
-      
-      <form>
+    </form>
+
+    <form>
         <h1>Iteration 4</h1>
         <input type="number" placeholder="Number to Divide" id="it4" />
         <input type="button" onclick="iteration4()" value="Iteration 4 Function" />
         <br />
         <h4 id="iteration4msg"></h4>
         <br />
-      </form>
-      
-      <form>
+    </form>
+
+    <form>
         <h1>Strings 4</h1>
         <input type="text" placeholder="String to Check" id="s4" />
         <input type="button" onclick="strings4()" value="String 4 Function" />
         <br />
         <h4 id="strings4msg"></h4>
         <br />
-      </form>
-      
-      <form>
-        <div id="dom1task">
-          <h1>DOM 1</h1>
-          <h3>Add element, then enter text into the text box and click add text</h3>
-          <h3>to add it to the page, then click delete text to remove it from the page</h3>
-          <input type="button" onclick="dom1AddEle()" value="Add Element" />
-          <input type="text" placeholder="Text to Add" id="d1" />
-          <input type="button" onclick="dom1AddStr()" value="Add Text" />
-          <input type="button" onclick="dom1DelEle()" value="Remove Element" />
-          <br />
-        </div>
-      </form>
-      
-      <script>
-        var string = "Hello World!";
-        
-        var person = {name: "Rhys", age: 21, occupation: "IT Consultant"};
-        var person2 = {name, age, occupation};
-        
-        function square(num) {
-          return num * num;
-        }
-        
-        function sum(num, num1, num2) {
-          return num + num1 + num2;
-        }
-        
-        function personOut(person) {
-          document.write(person.name + ", " + person.age + ", " + person.occupation);
-          var person = {name: "Mike", age: "30", occupation: "Lawyer"};
-          document.write("<br />");
-          document.write(person.name + ", " + person.age + ", " + person.occupation);
-        }
-        
-        function increaseAge() {
-          person.age += 1;
-          alert(person.age);
-        }
-        
-        function output() {
-          alert("This button outputted an alert!");
-        }
-        
-        function createPerson() {
-          person2.name = document.getElementById('name').value;
-          person2.age = document.getElementById('age').value;
-          person2.occupation = document.getElementById('occupation').value;
-          alert("Person created!");
-          //test outputs
-          console.log(person2.name);
-          console.log(person2.age);
-          console.log(person2.occupation);
-          
-          return person2;
-        }
-        
-        function outputPerson() {
-          //test outputs
-          console.log(person2.name);
-          console.log(person2.age);
-          console.log(person2.occupation);
+    </form>
 
-          var name = person2.name;
-          var age = person2.age;
-          var occ = person2.occupation;
-          document.getElementById('message').innerHTML = name + ", " + age + ", " + occ;
-          /*setTimeout(function() {
-            window.location.href = 'js.html';
-          }, 10000);*/
+    <form>
+        <div id="dom1task">
+            <h1>DOM 1</h1>
+            <h3>Add element, then enter text into the text box and click add text</h3>
+            <h3>to add it to the page, then click delete text to remove it from the page</h3>
+            <input type="button" onclick="dom1AddEle()" value="Add Element" />
+            <input type="text" placeholder="Text to Add" id="d1" />
+            <input type="button" onclick="dom1AddStr()" value="Add Text" />
+            <input type="button" onclick="dom1DelEle()" value="Remove Element" />
+            <br />
+        </div>
+    </form>
+
+    <script>
+        var string = "Hello World!";
+
+        var person = {
+            name: "Rhys",
+            age: 21,
+            occupation: "IT Consultant"
+        };
+        var person2 = {
+            name,
+            age,
+            occupation
+        };
+
+        function square(num) {
+            return num * num;
         }
-        
+
+        function sum(num, num1, num2) {
+            return num + num1 + num2;
+        }
+
+        function personOut(person) {
+            document.write(person.name + ", " + person.age + ", " + person.occupation);
+            var person = {
+                name: "Mike",
+                age: "30",
+                occupation: "Lawyer"
+            };
+            document.write("<br />");
+            document.write(person.name + ", " + person.age + ", " + person.occupation);
+        }
+
+        function increaseAge() {
+            person.age += 1;
+            alert(person.age);
+        }
+
+        function output() {
+            alert("This button outputted an alert!");
+        }
+
+        function createPerson() {
+            person2.name = document.getElementById('name').value;
+            person2.age = document.getElementById('age').value;
+            person2.occupation = document.getElementById('occupation').value;
+            alert("Person created!");
+            //test outputs
+            console.log(person2.name);
+            console.log(person2.age);
+            console.log(person2.occupation);
+
+            return person2;
+        }
+
+        function outputPerson() {
+            //test outputs
+            console.log(person2.name);
+            console.log(person2.age);
+            console.log(person2.occupation);
+
+            var name = person2.name;
+            var age = person2.age;
+            var occ = person2.occupation;
+            document.getElementById('message').innerHTML = name + ", " + age + ", " + occ;
+            /*setTimeout(function() {
+              window.location.href = 'js.html';
+            }, 10000);*/
+        }
+
         function editPerson() {
-          person2.name = document.getElementById('name').value;
-          person2.age = document.getElementById('age').value;
-          person2.occupation = document.getElementById('occupation').value;
-          
-          //test outputs
-          console.log(person2.name);
-          console.log(person2.age);
-          console.log(person2.occupation);
+            person2.name = document.getElementById('name').value;
+            person2.age = document.getElementById('age').value;
+            person2.occupation = document.getElementById('occupation').value;
+
+            //test outputs
+            console.log(person2.name);
+            console.log(person2.age);
+            console.log(person2.occupation);
         }
-        
+
         function conditionals1() {
-          c1Output = "";
-          if(person2.age >= 20 && person2.age <= 40) {
-            c1Output = "True";
-          } else {
-            c1Output = "False";
-          }
-          document.getElementById('conditionals1msg').innerHTML = c1Output;
-        }
-        
-        function strings1() {
-          var string1 = " He said \"My name is Elliott\" ";
-          document.getElementById('strings1msg').innerHTML = string1;    
-          var s1 = string1.toLocaleUpperCase();
-          document.getElementById('strings1msg2').innerHTML = s1; 
-        }
-        
-        function strings2() {
-          var strings2String = "Hello World! ";
-          var strings2Num = 5;
-          var strings2Concat = strings2String.concat(strings2Num);
-        }
-        
-        function arrays1() {
-          var arr = ["Samsung", "HP", "Dell"];          
-          document.getElementById('arrays1msg').innerHTML = arr.toString();
-          arr[arr.length] = "BenQ";          
-          document.getElementById('arrays1msg1').innerHTML = arr.toString();
-          arr.splice((arr.length) - 1, 1);          
-          document.getElementById('arrays1msg2').innerHTML = arr.toString();
-        }
-        
-        function iteration1() {
-          for(let i = 1; i <= 10; i++) {
-            console.log(i);
-          }
-          document.getElementById('iteration1msg').innerHTML = "See iterations in console";
-        }
-        
-        function iteration2() {
-          for(let i = 1; i <= 10; i++) {
-            if(i % 2 === 0) {
-              console.log(i);
-            }
-          }
-        }
-        
-        function fizzBuzz() {
-          var fAlt = document.getElementById('fizzAlt').value;
-          var bAlt = document.getElementById('buzzAlt').value;
-          var cnt = document.getElementById('count').value;
-          
-          for(let i = 1; i <= cnt; i++) {
-            if ((i % 3 === 0) && (i % 5 === 0)) {            
-              console.log(fAlt + bAlt);
-            } else if(i % 3 === 0) {
-              console.log(fAlt);
-            } else if (i % 5 === 0) {
-              console.log(bAlt);
+            c1Output = "";
+            if (person2.age >= 20 && person2.age <= 40) {
+                c1Output = "True";
             } else {
-              console.log(i);
+                c1Output = "False";
             }
-          }
-          document.getElementById('fizzbuzzmsg').innerHTML = "See outputs in console";
+            document.getElementById('conditionals1msg').innerHTML = c1Output;
         }
-        
+
+        function strings1() {
+            var string1 = " He said \"My name is Elliott\" ";
+            document.getElementById('strings1msg').innerHTML = string1;
+            var s1 = string1.toLocaleUpperCase();
+            document.getElementById('strings1msg2').innerHTML = s1;
+        }
+
+        function strings2() {
+            var strings2String = "Hello World! ";
+            var strings2Num = 5;
+            var strings2Concat = strings2String.concat(strings2Num);
+        }
+
+        function arrays1() {
+            var arr = ["Samsung", "HP", "Dell"];
+            document.getElementById('arrays1msg').innerHTML = arr.toString();
+            arr[arr.length] = "BenQ";
+            document.getElementById('arrays1msg1').innerHTML = arr.toString();
+            arr.splice((arr.length) - 1, 1);
+            document.getElementById('arrays1msg2').innerHTML = arr.toString();
+        }
+
+        function iteration1() {
+            for (let i = 1; i <= 10; i++) {
+                console.log(i);
+            }
+            document.getElementById('iteration1msg').innerHTML = "See iterations in console";
+        }
+
+        function iteration2() {
+            for (let i = 1; i <= 10; i++) {
+                if (i % 2 === 0) {
+                    console.log(i);
+                }
+            }
+        }
+
+        function fizzBuzz() {
+            var fAlt = document.getElementById('fizzAlt').value;
+            var bAlt = document.getElementById('buzzAlt').value;
+            var cnt = document.getElementById('count').value;
+
+            for (let i = 1; i <= cnt; i++) {
+                if ((i % 3 === 0) && (i % 5 === 0)) {
+                    console.log(fAlt + bAlt);
+                } else if (i % 3 === 0) {
+                    console.log(fAlt);
+                } else if (i % 5 === 0) {
+                    console.log(bAlt);
+                } else {
+                    console.log(i);
+                }
+            }
+            document.getElementById('fizzbuzzmsg').innerHTML = "See outputs in console";
+        }
+
         function iteration4() {
-          var it4num = Number(document.getElementById('it4').value);
-          var cIt4 = 0;
-          console.log("Starting number is: " + it4num);
-          do { 
-            if(it4num % 3 === 0) {
-              it4num = it4num / 3;
-              console.log("Divided by 3, new number: " + it4num);
-              cIt4++;
-            } else if ((it4num + 1) % 3 === 0) {
-              it4num = it4num + 1;
-              it4num = it4num / 3;
-              console.log("Added 1 then divided by 3, new number: " + it4num);
-              cIt4++;
-            } else if ((num - 1) % 3 === 0) {
-              it4num = it4num - 1;
-              it4num = it4num / 3;
-              console.log("Subtracted 1 then divided by 3, new number: " + it4num);
-              cIt4++;
-            }
-          } while (it4num != 1);
-          document.getElementById('iteration4msg').innerHTML = "See iterations in console, it took " + cIt4 + " iteration(s)";
+            var it4num = Number(document.getElementById('it4').value);
+            var cIt4 = 0;
+            console.log("Starting number is: " + it4num);
+            do {
+                if (it4num % 3 === 0) {
+                    it4num = it4num / 3;
+                    console.log("Divided by 3, new number: " + it4num);
+                    cIt4++;
+                } else if ((it4num + 1) % 3 === 0) {
+                    it4num = it4num + 1;
+                    it4num = it4num / 3;
+                    console.log("Added 1 then divided by 3, new number: " + it4num);
+                    cIt4++;
+                } else if ((num - 1) % 3 === 0) {
+                    it4num = it4num - 1;
+                    it4num = it4num / 3;
+                    console.log("Subtracted 1 then divided by 3, new number: " + it4num);
+                    cIt4++;
+                }
+            } while (it4num != 1);
+            document.getElementById('iteration4msg').innerHTML = "See iterations in console, it took " + cIt4 +
+                " iteration(s)";
         }
-        
+
         function strings4() {
-          var s4String = document.getElementById('s4').value;
-          var s4Count = 0;
-          for(let i = 0; i < s4String.length; i++) {
-            if((s4String.charAt(i) === s4String.charAt(i + 1)) && (s4String.charAt(i + 1) === s4String.charAt(i + 2))) {
-              s4Count++;
+            var s4String = document.getElementById('s4').value;
+            var s4Count = 0;
+            for (let i = 0; i < s4String.length; i++) {
+                if ((s4String.charAt(i) === s4String.charAt(i + 1)) && (s4String.charAt(i + 1) === s4String.charAt(i +
+                        2))) {
+                    s4Count++;
+                }
             }
-          }
-          document.getElementById('strings4msg').innerHTML = "There are " + s4Count + " triple(s)";
+            document.getElementById('strings4msg').innerHTML = "There are " + s4Count + " triple(s)";
         }
-        
+
         function dom1AddEle() {
-          var para = document.createElement("p");
-          para.setAttribute("id", "dom1pele");
-          //document.getElementById('dom1pele').innerHTML = "Default text";
-          var t = document.createTextNode("Default text");
-          para.appendChild(t);
-          var div = document.getElementById('dom1task');
-          div.appendChild(para);
-          document.appendChild(div);
+            var para = document.createElement("p");
+            para.setAttribute("id", "dom1pele");
+            //document.getElementById('dom1pele').innerHTML = "Default text";
+            var t = document.createTextNode("Default text");
+            para.appendChild(t);
+            var div = document.getElementById('dom1task');
+            div.appendChild(para);
+            document.appendChild(div);
         }
 
         function dom1AddStr() {
-          var d1Str = document.getElementById('d1').value;
-          document.getElementById('dom1pele').innerHTML = d1Str;
+            var d1Str = document.getElementById('d1').value;
+            document.getElementById('dom1pele').innerHTML = d1Str;
         }
 
         function dom1DelEle() {
-          var par = document.getElementById('dom1pele');
-          par.parentNode.removeChild(par);
+            var par = document.getElementById('dom1pele');
+            par.parentNode.removeChild(par);
         }
-        
+
         document.write("<br />");
         document.write("=====BASIC TASKS(BEFORE EVENTS 1)=====");
         document.write("<br />");
@@ -332,7 +347,7 @@
         document.write(sum(1, 2, 3));
         document.write("<br />");
         personOut(person)
-        
-      </script>
-    </body>
-  </html>
+    </script>
+</body>
+
+</html>
