@@ -18,13 +18,18 @@
     </div>
 
     <div>
+        <h3>Create Car</h3>
+        <input type="text" placeholder="Registration Number" id="regNo" />
+        <input type="text" placeholder="Car Make" id="make" />
+        <input type="number" placeholder="Year" id="yr" />
+        <input type="number" placeholder="Number of Faults" id="fault" />
+        <input type="button" onclick="createCar()" value="Create Car" />
+        <br /><br />
+    </div>
+
+    <div>
         <h3>Check Cars Into the Garage</h3>
         <input type="text" placeholder="Registration Number" id="regNoIn" />
-        <input type="text" placeholder="Car Make" id="makeIn" />
-        <input type="text" placeholder="Car Model" id="modIn" />
-        <input type="text" placeholder="Car Colour" id="colIn" />
-        <input type="number" placeholder="Year" id="yrIn" />
-        <input type="number" placeholder="Number of Faults" id="faultIn" />
         <input type="button" onclick="checkCarIn()" value="Check Car In" />
         <br /><br />
     </div>
@@ -47,6 +52,20 @@
         <input type="text" placeholder="Registration Number" id="regNoBill" />
         <input type="button" onclick="calcBill()" value="Calculate Bill" />
         <br /><br />
+    </div>
+
+    <h2>============================================================</h2>
+    <div id="adminUI">
+        <h3>Admin Interface</h3>
+        <h4>Commands:</h4>
+        <p>"create [make] [reg] [year] [numberOfFaults]" - Creates a new car with inputted values</p>
+        <p>"check in [reg]" - Checks the car with the corresponding registration number into the garage</p>
+        <p>"output garage" - Outputs the cars in the garage</p>
+        <p>"calculate [reg]" - Calculates the bill for the car with a given registration number</p>
+        <p>"check out [reg]" - Checks the car with the corresponding registration number out of the garage</p>
+        <p>DO NOT PUT A SPACE BETWEEN THE TWO PARTS OF THE REG NUMBER!</p>
+        <input type="text" placeholder="Input" id="adminInput" />
+        <input type="button" onclick="runAdminCommand()" value="Run Admin Command" />
     </div>
 </body>
 
