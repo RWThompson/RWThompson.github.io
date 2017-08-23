@@ -95,6 +95,7 @@ function runAdminCommand() {
             if (gList[i].regNo == reg) {
                 year = gList[i].year;
                 faults = gList[i].faults;
+                total = ((year / 100) + (faults * 20));
             }
         }
         let item = document.createElement("li");
