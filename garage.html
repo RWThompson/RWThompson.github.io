@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="js/garage.js"></script>
+</head>
+
+<body>
+    <div>
+        <h1>Garage</h1>
+    </div>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="uptojson1.html">Tasks up to JSON 1</a>
+        <a href="json1.html">JSON 1</a>
+        <a href="json2.html">JSON 2</a>
+        <a href="garage.html">Garage</a>
+    </div>
+
+    <div>
+        <h3>Check Cars Into the Garage</h3>
+        <input type="text" placeholder="Registration Number" id="regNoIn" />
+        <input type="text" placeholder="Car Make" id="makeIn" />
+        <input type="text" placeholder="Car Model" id="modIn" />
+        <input type="text" placeholder="Car Colour" id="colIn" />
+        <input type="number" placeholder="Year" id="yrIn" />
+        <input type="number" placeholder="Number of Faults" id="faultIn" />
+        <input type="button" onclick="checkCarIn()" value="Check Car In" />
+        <br /><br />
+    </div>
+
+    <div>
+        <h3>Check Cars Out of the Garage</h3>
+        <input type="text" placeholder="Registration Number" id="regNo" />
+        <input type="button" onclick="checkCarOut()" value="Check Car Out" />
+        <br /><br />
+    </div>
+
+    <div id="out">
+        <h3>Output the Contents of the Garage</h3>
+        <input type="button" onclick="outputGarage()" value="Output Garage" />
+        <br /><br />
+    </div>
+
+    <div id="bill">
+        <h3>Calculate Bill for a Car</h3>
+        <input type="text" placeholder="Registration Number" id="regNoBill" />
+        <input type="button" onclick="calcBill()" value="Calculate Bill" />
+        <br /><br />
+    </div>
+</body>
+
+</html>
