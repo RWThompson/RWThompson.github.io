@@ -1,0 +1,46 @@
+html {
+  background-color: #152B50;/*#193769;/*#04b4d3;*/
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+  font-family: "Arial", Arial, sans-serif;
+  color: white;
+}
+
+head {
+  
+}
+
+body {
+  
+}
+
+h1, h2, h3 {
+  color: red;
+}
+
+table {
+  width: 325px;
+  height: 100px;
+}
+
+table, th, td {
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+
+#desc {
+  border: 3px solid red;
+}
+
+#castCrew {
+  border: 3px solid red;
+}
+
+img {
+  margin-left: auto;
+  margin-right: auto;
+}

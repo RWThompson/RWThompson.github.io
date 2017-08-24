@@ -24,7 +24,7 @@ function checkCarIn() {
 function checkCarOut() {
     for (let i = 0; i < gList.length; i++) {
         if (gList[i].regNo === document.getElementById('regNoOut').value) {
-            gList.splice(gList[i], 1);
+            gList.splice(i, 1);
         }
     }
 }
@@ -63,50 +63,52 @@ function calcBill() {
 }
 
 function runAdminCommand() {
-    /*create car
-    check car in command
-    check car out
-    output garage
-    calculate bill*/
     let input = document.getElementById('adminInput').value;
-    let list = document.createElement("ul");
-    let d = document.getElementById('adminUI');
+    let terminal = document.getElementById('adminOutput');
 
     if (input.includes("create")) {
-
+        let delim = input.split(" ");
+        car = {
+            regNo: delim[2],
+            make: delim[1],
+            year: delim[3],
+            numFaults: delim[4],
+        };
+        let index = cList.length;
+        cList[index] = car;
+        terminal.append("Car with registration number " + delim[2] + " created" + "\n");
     } else if (input.includes("output")) {
         for (let i = 0; i < gList.length; i++) {
-            let item = document.createElement("li");
-            item.textContent = (`${i + 1}) REG: ${gList[i].regNo}, MAKE: ${gList[i].make}, YEAR: ${gList[i].year}, NUMBER OF FAULTS: ${gList[i].numFaults}`);
-            list.appendChild(item);
-            d.appendChild(list);
+            terminal.append((i + 1) + ") REG: " + gList[i].regNo + ", MAKE: " + gList[i].make + ", YEAR: " + gList[i].year + ", NUMBER OF FAULTS: " + gList[i].numFaults + "\n");
         }
     } else if (input.includes("check in")) {
-
-    } else if (input.includes("check out")) {
-
-    } else if (input.includes("calculate")) {
         let delim = input.split(" ");
-        let reg = delim[1];
-        let year = 0;
-        let faults = 0;
-        let total = 0;
-        for (let i = 0; i < gList.length; i++) {
-            if (gList[i].regNo == reg) {
-                year = gList[i].year;
-                faults = gList[i].faults;
-                total = ((year / 100) + (faults * 20));
+        for (let i = 0; i < cList.length; i++) {
+            if (cList[i].regNo === delim[2]) {
+                gList[gList.length] = cList[i];
             }
         }
-        let item = document.createElement("li");
-        item.textContent = total;
-        list.appendChild(item);
-        d.appendChild(list);
+        terminal.append("Car with registration number " + delim[2] + " has been checked in" + "\n");
+    } else if (input.includes("check out")) {
+        let delim = input.split(" ");
+        for (let i = 0; i < gList.length; i++) {
+            if (gList[i].regNo === delim[2]) {
+                gList.splice(i, 1);
+            }
+        }
+        terminal.append("Car with registration number " + delim[2] + " has been checked out" + "\n");
+    } else if (input.includes("calculate")) {
+        let delim = input.split(" ");
+        let total = 0;
+        for (let i = 0; i < gList.length; i++) {
+            if (gList[i].regNo === delim[1]) {
+                let year = parseInt(gList[i].year);
+                let faults = parseInt(gList[i].numFaults);
+                total = ((year / 100) + (faults * 20));
+                terminal.append("Total for " + delim[1] + " is " + total + "\n");
+            }
+        }
     } else {
-        let item = document.createElement("li");
-        item.textContent = "Please enter a valid command";
-        list.appendChild(item);
-        d.appendChild(list);
+        terminal.append("Please enter a valid command" + "\n");
     }
-    //d.appendChild(list);
 }
