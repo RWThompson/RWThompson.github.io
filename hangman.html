@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="uptojson1.html">Tasks up to JSON 1</a>
+        <a href="json1.html">JSON 1</a>
+        <a href="json2.html">JSON 2</a>
+        <a href="garage.html">Garage</a>
+        <a href="rektangles.html">Rektangles</a>
+        <a href="hangman.html">Hangman</a>
+        <br /><br /><br />
+    </div>
+
+    <div id="control">
+        <h3></h3>
+        <p>Select a Difficulty</p>
+        <select id="diff">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+        <input type="button" onclick="loadData()" value="Load a Word" />
+        <br /><br /><br />
+        <img class="img" id="hangman" src="" alt="Hangman Status"></image>
+        <div id="guesses">
+            <h4 id="guess">Guesses: </h4>
+        </div>
+        <div id="wordDisplay">
+        </div>
+        <div id="winLose">
+        </div>
+    </div>
+    <div>
+        <input type="text" placeholder="Input" id="input" pattern="[A-Za-z]{1}" maxlength="1" />
+        <input type="button" onclick="checkLetter()" value="Check Letter" />
+        <br />
+    </div>
+
+    <script src="js/hangman.js"></script>
+</body>
+
+</html>
