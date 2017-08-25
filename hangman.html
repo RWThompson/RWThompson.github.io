@@ -18,7 +18,15 @@
     </div>
 
     <div id="control">
-        <h3></h3>
+        <h1>Hangman</h1>
+        <h3>Enter your name or</h3>
+        <input type="button" onclick="loadPlayers()" value="Load Existing Players" />
+        <br /><br />
+        <input type="text" placeholder="Name" id="name" />
+        <input type="button" onclick="addPlayer()" value="Submit" />
+        <select id="players">
+        </select>
+        <input type="button" onclick="getStats()" value="Get Statistics" />
         <p>Select a Difficulty</p>
         <select id="diff">
             <option value="easy">Easy</option>
@@ -36,7 +44,7 @@
         <div id="winLose">
         </div>
     </div>
-    <div>
+    <div id="interface">
         <input type="text" placeholder="Input" id="input" pattern="[A-Za-z]{1}" maxlength="1" />
         <input type="button" onclick="checkLetter()" value="Check Letter" />
         <br />
