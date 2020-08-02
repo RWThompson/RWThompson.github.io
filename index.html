@@ -20,6 +20,18 @@
 
     <!-- Custom styles for this template -->
     <link href="css/freelancer.min.css" rel="stylesheet">
+	
+	<script>
+		let data;
+		let request = new XMLHttpRequest();
+		request.open("GET", "https://vix.digital/");
+		request.onload = () => {
+			console.log(request.response);
+			data = JSON.parse(request.response)
+		}
+		request.setRequestHeader("Accept", "application/json");
+		request.send();
+	</script>
 
   </head>
 
